@@ -1,3 +1,9 @@
 # Sorting Visualization
 ### This is a simple visualization project made using javascript 
-- Currently Bubble, Selection and Insertion sort has been implemented.
+- Bubble Sort 
+- Selection Sort
+- Insertion Sort
+- Quick Sort
+- Merge Sort
+
+### This is built using HTML, CSS, JavaScript

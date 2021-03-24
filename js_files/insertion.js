@@ -10,7 +10,7 @@ async function insertion(){
         // color
         ele[i].style.background = 'blue';
 
-        await waitforme(20);
+        await waitforme(delay);
 
         while(j >= 0 && (parseInt(ele[j].style.height) > parseInt(key))){
             console.log('In while loop');
@@ -19,7 +19,7 @@ async function insertion(){
             ele[j + 1].style.height = ele[j].style.height;
             j--;
 
-            await waitforme(20);
+            await waitforme(delay);
 
             // color
             for(let k = i; k >= 0; k--){

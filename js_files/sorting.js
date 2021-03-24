@@ -7,13 +7,14 @@ function swap(el1, el2) {
     
 }
 
+let delay = 30;
 function waitforme(milisec) { 
     return new Promise(resolve => { 
         setTimeout(() => { resolve('') }, milisec); 
     }) 
 }
 
-var array = [];
+let array = [];
 createNewArray();
 function createNewArray() {
     deleteChild();

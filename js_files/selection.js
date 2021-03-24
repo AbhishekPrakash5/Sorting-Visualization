@@ -11,7 +11,7 @@ async function selection(){
             // Change color for the current comparision (in consideration for min_index)
             ele[j].style.background = 'red';
 
-            await waitforme(20);
+            await waitforme(delay);
             if(parseInt(ele[j].style.height) < parseInt(ele[min_index].style.height)){
                 console.log('In if condition height comparision');
                 if(min_index !== i){
@@ -25,7 +25,7 @@ async function selection(){
                 ele[j].style.background = 'cyan';
             }   
         }
-        await waitforme(10);
+        await waitforme(delay);
         swap(ele[min_index], ele[i]);
         // change the min element index back to normal as it is swapped 
         ele[min_index].style.background = 'cyan';
