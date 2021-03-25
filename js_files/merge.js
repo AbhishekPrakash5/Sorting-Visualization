@@ -31,7 +31,7 @@ async function merge(ele, low, mid, high){
         console.log('In merge while loop');
         console.log(parseInt(left[i]), parseInt(right[j]));
         
-        await waitforme(delay);
+        //await waitforme(delay);
         // color for which two r being compared for merging
         
         if(parseInt(left[i]) <= parseInt(right[j])){

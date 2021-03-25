@@ -22,18 +22,3 @@ async function bubble() {
 
 const bubSortbtn = document.querySelector(".bubbleSort");
 bubSortbtn.addEventListener('click', bubble);
-
-
-/* const ele = document.querySelectorAll(".bar");
-console.log(ele[0].style.height);
-console.log(ele[1].style.height);
-let temp = ele[0].style.height;
-ele[0].style.height = ele[1].style.height;
-ele[1].style.height = temp;
-console.log(ele[0].style.height);
-console.log(ele[1].style.height);
-
-console.log(typeof(temp));
-temp = parseInt(temp);
-console.log(typeof(temp));
- */

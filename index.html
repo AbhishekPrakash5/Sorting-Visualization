@@ -12,8 +12,16 @@
     <h1 align="center">Sorting Visualizer</h1>
     <nav>
         <div class="row">
-            <div class="col">
+            <div class="col gap-2 d-sm-flex" id="newArray">
                 <button type="button" class="btn btn-outline-success btn-dark newArray">New Array</button>
+            </div>
+            <div class="col" id="input">
+                <span id="size">Size
+                    <input id="arr_sz" type="range" min="5" max="100" step=1 value=60>
+                </span>
+                <span id="speed">Speed
+                    <input id="speed_input" type="range" min="20" max="300" stepDown=10 value=60>
+                </span>
             </div>
             <div class="col gap-2 d-sm-flex justify-content-end">
                 <button type="button" class="btn btn-outline-primary btn-dark bubbleSort">Bubble Sort</button>

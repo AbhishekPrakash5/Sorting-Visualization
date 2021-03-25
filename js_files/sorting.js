@@ -7,22 +7,35 @@ function swap(el1, el2) {
     
 }
 
-let delay = 30;
 function waitforme(milisec) { 
     return new Promise(resolve => { 
         setTimeout(() => { resolve('') }, milisec); 
     }) 
 }
+let arraySize = document.querySelector('#arr_sz');
+arraySize.addEventListener('input', function(){
+    console.log(arraySize.value, typeof(arraySize.value));
+    createNewArray(parseInt(arraySize.value));
+});
+
+let delay = 260;
+
+let delayElement = document.querySelector('#speed_input');
+delayElement.addEventListener('input', function(){
+    console.log(delayElement.value, typeof(delayElement.value));
+    delay = 320 - parseInt(delayElement.value);
+});
 
 let array = [];
 createNewArray();
-function createNewArray() {
+function createNewArray(noOfBars = 60) {
+    // calling helper function 
     deleteChild();
 
     // creating an array of random numbers 
     array = [];
-    for (let i = 0; i < 100; i++) {
-        array.push(Math.floor(Math.random() * 400) + 1);
+    for (let i = 0; i < noOfBars; i++) {
+        array.push(Math.floor(Math.random() * 250) + 1);
     }
     console.log(array);
 
@@ -30,13 +43,11 @@ function createNewArray() {
     const bars = document.querySelector("#bars");
 
     // create multiple element div using loop and adding class 'bar col'
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < noOfBars; i++) {
         const bar = document.createElement("div");
-        bar.style.height = `${array[i]}px`;
-        //bar.style.transform = `translateX(${i * 3}px)`;
+        bar.style.height = `${array[i]*2}px`;
         bar.classList.add('bar');
         bar.classList.add('flex-item');
-        //bar.classList.add("col");
         bar.classList.add(`barNo${i}`);
         bars.appendChild(bar);
     }
@@ -49,4 +60,8 @@ function deleteChild() {
 
 // selecting newarray button from DOM and adding eventlistener
 const newArray = document.querySelector(".newArray");
-newArray.addEventListener("click", createNewArray);
+newArray.addEventListener("click", function(){
+    console.log("From newArray " + arraySize.value);
+    console.log("From newArray " + delay);
+    createNewArray(arraySize.value);
+});

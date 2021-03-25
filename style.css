@@ -6,17 +6,28 @@ body {
 }
 .flex-container{
     margin-top: 20px;
-    /* border: 2px slateblue solid; */
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     height: 500px;
     justify-content: center;
-    transition: 0.2s all ease;
+    transition: 2s all ease;
 }
 
 .flex-item{
     background: cyan;
     border: 1pt solid black;
     width: 10px;
+    transition: 0.1s all ease;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+#input{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
 }
