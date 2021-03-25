@@ -35,4 +35,12 @@ async function selection(){
 }
 
 const selectionSortbtn = document.querySelector(".selectionSort");
-selectionSortbtn.addEventListener('click', selection);
+selectionSortbtn.addEventListener('click', async function(){
+    disableSortingBtn();
+    disableSizeSlider();
+    disableNewArrayBtn();
+    await selection();
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArrayBtn();
+});

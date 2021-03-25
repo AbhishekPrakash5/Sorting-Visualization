@@ -33,6 +33,14 @@ async function insertion(){
 }
 
 const inSortbtn = document.querySelector(".insertionSort");
-inSortbtn.addEventListener('click', insertion);
+inSortbtn.addEventListener('click', async function(){
+    disableSortingBtn();
+    disableSizeSlider();
+    disableNewArrayBtn();
+    await insertion();
+    enableSortingBtn();
+    enableSizeSlider();
+    enableNewArrayBtn();
+});
 
 
